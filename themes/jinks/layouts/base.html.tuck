@@ -24,11 +24,8 @@
   <footer class="foot">
     <div class="wrap foot-inner">
       <a class="foot-home" href="{{ '/' | relative_url }}" aria-label="Jinks home">
-        <img src="{{ '/assets/logo-app-icon.png' | relative_url }}" alt="" width="56" height="56">
-        <span>
-          <strong>Jinks</strong>
-          <span>A little mischief for the static web.</span>
-        </span>
+        <img src="{{ '/assets/logo-wordmark.png' | relative_url }}" alt="" width="561" height="196">
+        <span>A little mischief for the static web.</span>
       </a>
       <nav class="foot-nav" aria-label="Footer">
         <div>

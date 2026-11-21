@@ -50,20 +50,15 @@ h1, h2, h3 { font-family: Georgia, serif; line-height: 1.1; }
   gap: 1.75rem 3rem;
 }
 .foot-home {
-  display: flex;
-  align-items: center;
-  gap: .9rem;
+  display: grid;
+  justify-items: start;
+  gap: .45rem;
   width: fit-content;
   color: var(--ink);
   text-decoration: none;
 }
-.foot-home img { flex: 0 0 auto; }
-.foot-home strong {
-  display: block;
-  font: 700 1.75rem/1.1 Georgia, serif;
-  letter-spacing: -.025em;
-}
-.foot-home span span { display: block; margin-top: .3rem; color: var(--muted); }
+.foot-home img { width: 10rem; }
+.foot-home span { color: var(--muted); }
 .foot-nav {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
