@@ -6,7 +6,7 @@
   <title>{{ page.title }} · Jinks</title>
   <meta name="description" content="Jinks builds static sites from Markdown, TOML, and Tuck.">
   <link rel="icon" href="{{ '/assets/logo-app-icon.png' | relative_url }}">
-  <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/style.css' | asset }}">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -16,11 +16,10 @@
       <div>
         <a href="{{ '/docs/' | relative_url }}">Docs</a>
         <a href="{{ '/cookbook/' | relative_url }}">Cookbook</a>
-        <a href="https://pooka.run/">Pooka</a>
       </div>
     </nav>
   </header>
   <main id="main">{% block body %}{{ content | safe }}{% endblock %}</main>
-  <footer class="foot"><p class="wrap">© Jinks</p></footer>
+  <footer class="foot"><p>© Jinks</p></footer>
 </body>
 </html>

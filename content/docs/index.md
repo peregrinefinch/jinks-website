@@ -44,7 +44,5 @@ for publishing it with GitHub Pages or Netlify.
 
 ## Build from source
 
-With Pooka and Erlang installed, clone the
-[Jinks repository](https://github.com/peregrinefinch/jinks) and run
-`pooka export escript` from the checkout. The executable is written to
-`build/jinks`.
+With Pooka and Erlang installed, run `pooka export escript` from a Jinks
+source checkout. The executable is written to `build/jinks`.

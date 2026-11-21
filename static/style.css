@@ -38,12 +38,15 @@ h1, h2, h3 { font-family: Georgia, serif; line-height: 1.1; }
 .features h2 { font-size: 1.65rem; margin-bottom: .5rem; }
 .features p { margin-top: 0; }
 .foot {
+  display: grid;
+  place-items: center;
   padding-block: 1rem;
   border-top: 1px solid var(--border);
   color: var(--muted);
   font-size: .875rem;
   text-align: center;
 }
+.foot p { margin: 0; }
 .guide { display: grid; grid-template-columns: 12rem minmax(0, 1fr); gap: 3rem; padding-block: 2.5rem 4rem; }
 .guide aside nav { display: grid; gap: .45rem; border-left: 2px solid var(--border); padding-left: 1rem; }
 .guide article { max-width: 48rem; }

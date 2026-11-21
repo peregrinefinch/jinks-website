@@ -64,6 +64,4 @@ longer building before removing it; Jinks never steals an existing lock.
 
 The small Erlang boundary supplies link-aware inspection, exclusive file
 creation, directory renames, and rollback. Ownership policy, manifest parsing,
-file selection, and command behaviour remain in Pooka. See the Erlang
-[file documentation](https://www.erlang.org/doc/apps/kernel/file.html) for the
-underlying platform-dependent rename behaviour.
+file selection, and command behaviour remain in Pooka. Directory rename behaviour depends on the underlying platform.
