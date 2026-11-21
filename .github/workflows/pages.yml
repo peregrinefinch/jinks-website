@@ -27,8 +27,6 @@ jobs:
       - uses: actions/configure-pages@v6
         id: pages
       - run: pooka deps download
-      - name: Build and smoke-test the Jinks escript
-        run: ./scripts/build-escript.sh
       - name: Check and build
         env:
           PAGES_URL: ${{ steps.pages.outputs.base_url }}

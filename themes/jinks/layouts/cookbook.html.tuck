@@ -1,0 +1,10 @@
+{% extends "base.html.tuck" %}
+{% block body %}
+<article class="wrap recipe">
+  {% if page.url != "/cookbook/" %}
+    <a class="recipe-back" href="{{ '/cookbook/' | relative_url }}">Cookbook</a>
+  {% endif %}
+  <h1>{{ page.title }}</h1>
+  {{ content | safe }}
+</article>
+{% endblock %}

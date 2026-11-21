@@ -5,7 +5,6 @@ The dependency is pinned in `pooka.toml`.
 
 ```sh
 pooka deps download
-./scripts/build-escript.sh
 pooka run -- check
 pooka run -- serve
 ```

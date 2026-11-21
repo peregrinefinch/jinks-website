@@ -1,13 +1,12 @@
 ---
-layout = "guide"
+layout = "cookbook"
 title = "Cookbook"
 ---
 
-## Add a post
+## Start here
 
-Run `jinks new posts/hello my-site --title "Hello"`. This creates a
-draft in `my-site/content/posts/`. Preview it with
-`jinks serve my-site --drafts` and set `draft = false` to publish it.
+[Build a basic blog](basic-blog/) from a fresh Jinks site. Set up a home page,
+a posts archive, an About page, and an RSS feed, then build the finished site.
 
 ## Move a page without breaking its old address
 

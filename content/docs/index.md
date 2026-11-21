@@ -5,7 +5,7 @@ title = "Getting started"
 
 ## Install
 
-[Download the Jinks escript](../downloads/jinks). It requires Erlang/OTP 29
+[Download the Jinks 1.0.0 escript](https://github.com/peregrinefinch/jinks/releases/download/v1.0.0/jinks). It requires Erlang/OTP 29
 and runs without a Pooka compiler installation.
 
 On macOS or Linux, put the downloaded file in a directory on your `PATH`:
