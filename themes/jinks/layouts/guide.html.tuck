@@ -1,0 +1,19 @@
+{% extends "base.html.tuck" %}
+{% block body %}
+<div class="wrap guide">
+  <aside>
+    <nav aria-label="Documentation">
+      <a href="{{ '/docs/' | relative_url }}">Getting started</a>
+      <a href="{{ '/docs/commands/' | relative_url }}">Commands</a>
+      <a href="{{ '/docs/content/' | relative_url }}">Content and data</a>
+      <a href="{{ '/docs/templates/' | relative_url }}">Templates and aliases</a>
+      <a href="{{ '/docs/listings/' | relative_url }}">Tags and pagination</a>
+      <a href="{{ '/docs/publishing/' | relative_url }}">Feeds and helpers</a>
+      <a href="{{ '/docs/serve/' | relative_url }}">Live reload</a>
+      <a href="{{ '/docs/output/' | relative_url }}">Output and recovery</a>
+      <a href="{{ '/docs/deployment/' | relative_url }}">Deployment</a>
+    </nav>
+  </aside>
+  <article><h1>{{ page.title }}</h1>{{ content | safe }}</article>
+</div>
+{% endblock %}

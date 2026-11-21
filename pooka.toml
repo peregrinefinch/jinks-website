@@ -1,0 +1,5 @@
+name = "jinks_site"
+version = "1.0.0"
+
+[dependencies]
+jinks = { git = "https://github.com/peregrinefinch/jinks.git", rev = "7a25cb7f99afd138580aa3c3012e92f089d2d7ba" }

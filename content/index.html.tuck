@@ -1,0 +1,23 @@
+---
+layout = "base"
+title = "A little mischief for the static web"
+---
+<section class="wrap hero">
+  <div>
+    <img class="wordmark" src="{{ '/assets/logo-wordmark.png' | relative_url }}" alt="Jinks" width="561" height="196">
+    <h1>A little mischief for the static web.</h1>
+    <p class="lede">Build a static site with Markdown, TOML, and Tuck. Give it a theme, watch it change as you write, and publish the files anywhere.</p>
+    <div class="actions">
+      <a class="button" href="{{ '/docs/' | relative_url }}">Get started</a>
+      <a class="button quiet" href="{{ '/cookbook/' | relative_url }}">Browse recipes</a>
+    </div>
+  </div>
+  <img class="hero-art" src="{{ '/assets/mascot-hero.png' | relative_url }}" alt="A fox in a teal hood reading by lantern light under an autumn tree" width="1192" height="1181">
+</section>
+<section class="workshop">
+  <div class="wrap features">
+    <article><img src="{{ '/assets/mascot-writing.png' | relative_url }}" alt="" loading="lazy"><h2>Write a page</h2><p>Keep posts and pages in Markdown with TOML front matter.</p><a href="{{ '/docs/content/' | relative_url }}">Content and data</a></article>
+    <article><img src="{{ '/assets/mascot-coding.png' | relative_url }}" alt="" loading="lazy"><h2>Make it yours</h2><p>Use Tuck templates and local themes. See changes in the browser as you edit.</p><a href="{{ '/docs/templates/' | relative_url }}">Templates and aliases</a></article>
+    <article><img src="{{ '/assets/mascot-building.png' | relative_url }}" alt="" loading="lazy"><h2>Send it out</h2><p>Check links and build static output with feeds, sitemaps, and search.</p><a href="{{ '/docs/deployment/' | relative_url }}">Deploy a site</a></article>
+  </div>
+</section>

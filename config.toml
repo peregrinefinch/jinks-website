@@ -1,0 +1,12 @@
+title = "Jinks"
+base-url = "http://localhost:4190"
+theme = "jinks"
+output-dir = "public"
+
+[server]
+port = 4190
+
+[publishing]
+sitemap = true
+search = true
+robots = true

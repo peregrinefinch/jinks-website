@@ -1,0 +1,7 @@
+/build/
+/public/
+/.jinks/
+/.jinks-build.lock
+.jinks-stage-*
+.jinks-backup-*
+/pages-preview/

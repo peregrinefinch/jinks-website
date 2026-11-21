@@ -1,0 +1,9 @@
+// SPDX-License-Identifier: Apache-2.0
+
+module main
+
+import jinks
+
+main() {
+  jinks.main()
+}

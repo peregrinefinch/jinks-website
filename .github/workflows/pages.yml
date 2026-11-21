@@ -1,0 +1,51 @@
+# SPDX-License-Identifier: Apache-2.0
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: "29"
+      - uses: peregrinefinch/setup-pooka@v1
+        with:
+          pooka-version: "0.3.3"
+      - uses: actions/configure-pages@v6
+        id: pages
+      - run: pooka deps download
+      - name: Check and build
+        env:
+          PAGES_URL: ${{ steps.pages.outputs.base_url }}
+        run: |
+          pooka run -- check --environment production --base-url "$PAGES_URL"
+          pooka run -- build --environment production --base-url "$PAGES_URL"
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: public
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/deploy-pages@v4
+        id: deployment

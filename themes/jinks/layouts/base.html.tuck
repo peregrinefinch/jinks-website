@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title }} · Jinks</title>
+  <meta name="description" content="Jinks builds static sites from Markdown, TOML, and Tuck.">
+  <link rel="icon" href="{{ '/assets/logo-app-icon.png' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="top">
+    <nav class="wrap nav" aria-label="Main">
+      <a class="brand" href="{{ '/' | relative_url }}" aria-label="Jinks home"><img src="{{ '/assets/logo-app-icon.png' | relative_url }}" alt="" width="34" height="34"> Jinks</a>
+      <div>
+        <a href="{{ '/docs/' | relative_url }}">Docs</a>
+        <a href="{{ '/cookbook/' | relative_url }}">Cookbook</a>
+        <a href="https://pooka.run/">Pooka</a>
+      </div>
+    </nav>
+  </header>
+  <main id="main">{% block body %}{{ content | safe }}{% endblock %}</main>
+  <footer class="foot"><div class="wrap"><span>Jinks</span><a href="{{ '/docs/deployment/' | relative_url }}">Deployment</a><a href="https://pooka.run/">Built with Pooka</a></div></footer>
+</body>
+</html>
