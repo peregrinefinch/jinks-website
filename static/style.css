@@ -60,7 +60,7 @@ code { font-size: .95em; }
 table { display: block; overflow-x: auto; max-width: 100%; }
 @media (max-width: 720px) {
   .wrap { width: calc(100% - 2rem); }
-  .hero, .features, .guide { grid-template-columns: 1fr; }
+  .hero, .features, .guide { grid-template-columns: minmax(0, 1fr); }
   .hero { padding-block: 1.5rem; }
   .hero-art { width: min(100%, 30rem); margin-inline: auto; }
   .guide { gap: 1.5rem; }
