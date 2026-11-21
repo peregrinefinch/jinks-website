@@ -21,30 +21,6 @@
     </nav>
   </header>
   <main id="main">{% block body %}{{ content | safe }}{% endblock %}</main>
-  <footer class="foot">
-    <div class="wrap foot-inner">
-      <a class="foot-home" href="{{ '/' | relative_url }}" aria-label="Jinks home">
-        <img src="{{ '/assets/logo-wordmark.png' | relative_url }}" alt="" width="561" height="196">
-        <span>A little mischief for the static web.</span>
-      </a>
-      <nav class="foot-nav" aria-label="Footer">
-        <div>
-          <h2>Learn</h2>
-          <ul>
-            <li><a href="{{ '/docs/#install' | relative_url }}">Install</a></li>
-            <li><a href="{{ '/docs/' | relative_url }}">Documentation</a></li>
-            <li><a href="{{ '/cookbook/' | relative_url }}">Cookbook</a></li>
-          </ul>
-        </div>
-        <div>
-          <h2>Project</h2>
-          <ul>
-            <li><a href="https://github.com/peregrinefinch/jinks">Source on GitHub</a></li>
-            <li><a href="https://pooka.run/">Built with Pooka</a></li>
-          </ul>
-        </div>
-      </nav>
-    </div>
-  </footer>
+  <footer class="foot"><p class="wrap">© Jinks</p></footer>
 </body>
 </html>
