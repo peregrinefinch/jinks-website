@@ -3,21 +3,48 @@ layout = "guide"
 title = "Getting started"
 ---
 
-From a Jinks source checkout, with Pooka and Erlang installed:
+## Install
+
+[Download the Jinks escript](../downloads/jinks). It requires Erlang/OTP 29
+and runs without a Pooka compiler installation.
+
+On macOS or Linux, put the downloaded file in a directory on your `PATH`:
 
 ```sh
-pooka deps download
-pooka run -- init my-site
-pooka run -- serve my-site
+mkdir -p "$HOME/.local/bin"
+install -m 755 ./jinks "$HOME/.local/bin/jinks"
+export PATH="$HOME/.local/bin:$PATH"
+jinks --help
+```
+
+Run those commands from the folder containing the download. Add the
+`export PATH` line to your shell startup file if that directory is new to
+your `PATH`.
+
+On Windows, run `escript .\jinks --help` from the download directory. Use
+`escript .\jinks` in place of `jinks` in the examples below.
+
+## Create a site
+
+```sh
+jinks init my-site
+jinks serve my-site
 ```
 
 Open the address printed by the server. Edit `my-site/content/` and the
 minimal theme in `my-site/themes/minimal/` to see the preview update.
 
 ```sh
-pooka run -- check my-site
-pooka run -- build my-site --environment production
+jinks check my-site
+jinks build my-site --environment production
 ```
 
 The production output is in `my-site/public/`. See [deployment](deployment/)
 for publishing it with GitHub Pages or Netlify.
+
+## Build from source
+
+With Pooka and Erlang installed, clone the
+[Jinks repository](https://github.com/peregrinefinch/jinks) and run
+`pooka export escript` from the checkout. The executable is written to
+`build/jinks`.

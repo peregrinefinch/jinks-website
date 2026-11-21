@@ -21,6 +21,22 @@
     </nav>
   </header>
   <main id="main">{% block body %}{{ content | safe }}{% endblock %}</main>
-  <footer class="foot"><div class="wrap"><span>Jinks</span><a href="{{ '/docs/deployment/' | relative_url }}">Deployment</a><a href="https://pooka.run/">Built with Pooka</a></div></footer>
+  <footer class="foot">
+    <div class="wrap foot-inner">
+      <div>
+        <a class="brand" href="{{ '/' | relative_url }}">
+          <img src="{{ '/assets/logo-app-icon.png' | relative_url }}" alt="" width="34" height="34">
+          Jinks
+        </a>
+        <p>A little mischief for the static web.</p>
+      </div>
+      <nav aria-label="Footer">
+        <a href="{{ '/docs/#install' | relative_url }}">Install</a>
+        <a href="{{ '/docs/' | relative_url }}">Docs</a>
+        <a href="https://github.com/peregrinefinch/jinks">Source</a>
+        <a href="https://pooka.run/">Built with Pooka</a>
+      </nav>
+    </div>
+  </footer>
 </body>
 </html>

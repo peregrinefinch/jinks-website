@@ -3,8 +3,15 @@ layout = "guide"
 title = "Deploying a Jinks site"
 ---
 
-Build from the Pooka project that provides the Jinks command. For a site with
-its own entry point and providers, run these commands from the site project.
+From a site directory, use the [Jinks escript](../#install):
+
+```sh
+jinks check --environment production
+jinks build --environment production
+```
+
+If your site has a Pooka entry point with custom data providers, run the
+following from that project instead:
 
 ```sh
 pooka deps download

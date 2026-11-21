@@ -40,8 +40,8 @@ files before rebuilding. Jinks does not silently adopt them.
 ## Clean
 
 ```sh
-pooka run -- clean /path/to/my-site
-pooka run -- clean /path/to/my-site --config site.toml --output preview
+jinks clean /path/to/my-site
+jinks clean /path/to/my-site --config site.toml --output preview
 ```
 
 Clean removes manifest-owned generated files. It preserves unowned output,

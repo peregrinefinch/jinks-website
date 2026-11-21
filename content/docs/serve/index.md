@@ -6,7 +6,7 @@ title = "A page with the window open"
 Build, watch, and serve a local site:
 
 ```sh
-pooka run -- serve /path/to/my-site
+jinks serve /path/to/my-site
 ```
 
 The default address is `http://127.0.0.1:4000`. Ctrl-C stops the command. The
@@ -30,10 +30,10 @@ Port zero asks the OS for a free port. The command prints the chosen address, in
 Command-line options override these defaults:
 
 ```sh
-pooka run -- serve /path/to/my-site --port 8080
-pooka run -- serve /path/to/my-site --host ::1 --port 8080
-pooka run -- serve /path/to/my-site --no-reload
-pooka run -- serve --help
+jinks serve /path/to/my-site --port 8080
+jinks serve /path/to/my-site --host ::1 --port 8080
+jinks serve /path/to/my-site --no-reload
+jinks serve --help
 ```
 
 `--no-reload` disables the browser client, not file watching. Pages still rebuild.

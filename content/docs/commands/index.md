@@ -3,16 +3,16 @@ layout = "guide"
 title = "One configuration, a few temporary choices"
 ---
 
-Run these commands from the Jinks source project with `pooka run --`. Each command
+Run these commands with the installed Jinks escript. Each command
 also has its own `--help` or `-h`; `help build` is another way to find the build
 instructions. Help does not require an existing site.
 
 ## New content
 
 ```sh
-pooka run -- new posts/the-small-hours /path/to/site --title "The small hours"
-pooka run -- new guides/first-steps.md /path/to/site --date 2024-02-29
-pooka run -- new about /path/to/site --layout page --config config.preview.toml
+jinks new posts/the-small-hours /path/to/site --title "The small hours"
+jinks new guides/first-steps.md /path/to/site --date 2024-02-29
+jinks new about /path/to/site --layout page --config config.preview.toml
 ```
 
 The path is relative to `content/`; a missing `.md` extension is added. The
@@ -36,11 +36,11 @@ observes its creation, but the new draft remains hidden unless the preview uses
 ## Build and check
 
 ```sh
-pooka run -- build /path/to/site
-pooka run -- check /path/to/site
-pooka run -- build /path/to/site --config config.preview.toml
-pooka run -- build /path/to/site --output preview --base-url https://example.org/
-pooka run -- build /path/to/site --drafts --future
+jinks build /path/to/site
+jinks check /path/to/site
+jinks build /path/to/site --config config.preview.toml
+jinks build /path/to/site --output preview --base-url https://example.org/
+jinks build /path/to/site --drafts --future
 ```
 
 Build publishes through the owned-file manifest. Check uses the same rendering,
@@ -72,9 +72,9 @@ and missing configuration files produce errors with a failing exit status.
 ## Serve
 
 ```sh
-pooka run -- serve /path/to/site --config config.preview.toml --output preview
-pooka run -- serve /path/to/site --drafts --future --port 8080
-pooka run -- serve /path/to/site --no-reload
+jinks serve /path/to/site --config config.preview.toml --output preview
+jinks serve /path/to/site --drafts --future --port 8080
+jinks serve /path/to/site --no-reload
 ```
 
 Serve accepts the build options alongside `--host`, `--port` / `-p`, and
@@ -89,7 +89,7 @@ place. See [serving and live reload](../serve/) for the watcher and browser clie
 ## Clean
 
 ```sh
-pooka run -- clean /path/to/site --config config.preview.toml --output preview
+jinks clean /path/to/site --config config.preview.toml --output preview
 ```
 
 Clean accepts only configuration/output options and help. It removes only
