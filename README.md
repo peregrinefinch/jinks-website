@@ -1,12 +1,11 @@
 # Jinks website
 
 The Jinks homepage, guides, and cookbook are built with [Jinks](https://github.com/peregrinefinch/jinks).
-The dependency is pinned in `pooka.toml`.
+Install the [Jinks escript](https://peregrinefinch.github.io/jinks-website/docs/#install) and Erlang/OTP 29.
 
 ```sh
-pooka deps download
-pooka run -- check
-pooka run -- serve
+jinks check
+jinks serve
 ```
 
 The local preview listens at http://127.0.0.1:4190. GitHub Actions builds and
