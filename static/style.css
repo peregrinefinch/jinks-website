@@ -37,14 +37,45 @@ h1, h2, h3 { font-family: Georgia, serif; line-height: 1.1; }
 .features img { height: 9rem; width: auto; object-fit: contain; }
 .features h2 { font-size: 1.65rem; margin-bottom: .5rem; }
 .features p { margin-top: 0; }
-.foot { padding-block: 1.7rem; background: var(--ink); color: var(--cream); }
-.foot-inner, .foot nav { display: flex; flex-wrap: wrap; gap: .75rem 1.35rem; }
-.foot-inner { align-items: center; justify-content: space-between; }
-.foot nav { align-items: center; }
-.foot a { color: var(--cream); }
-.foot a:focus-visible { outline-color: var(--amber); }
-.foot .brand { text-decoration: none; font-weight: 700; }
-.foot p { margin: .35rem 0 0; color: #d5e6de; }
+.foot {
+  padding-block: clamp(1.7rem, 4vw, 2.8rem);
+  border-top: 1px solid #d9c9b2;
+  background: #f5ead9;
+  color: var(--ink);
+}
+.foot-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  align-items: start;
+  gap: 1.75rem 3rem;
+}
+.foot-home {
+  display: flex;
+  align-items: center;
+  gap: .9rem;
+  width: fit-content;
+  color: var(--ink);
+  text-decoration: none;
+}
+.foot-home img { flex: 0 0 auto; }
+.foot-home strong {
+  display: block;
+  font: 700 1.75rem/1.1 Georgia, serif;
+  letter-spacing: -.025em;
+}
+.foot-home span span { display: block; margin-top: .3rem; color: var(--muted); }
+.foot-nav {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  border-left: 1px solid #d9c9b2;
+  padding-left: 2rem;
+}
+.foot-nav h2 { margin: 0 0 .55rem; font: 700 1rem/1.5 system-ui, sans-serif; }
+.foot-nav ul { list-style: none; margin: 0; padding: 0; }
+.foot-nav li + li { margin-top: .3rem; }
+.foot-nav a { text-decoration-color: transparent; }
+.foot-nav a:hover, .foot-nav a:focus-visible { text-decoration-color: currentColor; }
 .guide { display: grid; grid-template-columns: 12rem minmax(0, 1fr); gap: 3rem; padding-block: 2.5rem 4rem; }
 .guide aside nav { display: grid; gap: .45rem; border-left: 2px solid var(--border); padding-left: 1rem; }
 .guide article { max-width: 48rem; }
@@ -64,5 +95,7 @@ table { display: block; overflow-x: auto; max-width: 100%; }
   .hero { padding-block: 1.5rem; }
   .hero-art { width: min(100%, 30rem); margin-inline: auto; }
   .guide { gap: 1.5rem; }
+  .foot-inner { grid-template-columns: minmax(0, 1fr); }
+  .foot-nav { border-left: 0; border-top: 1px solid #d9c9b2; padding: 1.25rem 0 0; }
   .guide aside nav { display: flex; flex-wrap: wrap; column-gap: 1rem; }
 }

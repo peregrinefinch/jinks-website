@@ -23,18 +23,29 @@
   <main id="main">{% block body %}{{ content | safe }}{% endblock %}</main>
   <footer class="foot">
     <div class="wrap foot-inner">
-      <div>
-        <a class="brand" href="{{ '/' | relative_url }}">
-          <img src="{{ '/assets/logo-app-icon.png' | relative_url }}" alt="" width="34" height="34">
-          Jinks
-        </a>
-        <p>A little mischief for the static web.</p>
-      </div>
-      <nav aria-label="Footer">
-        <a href="{{ '/docs/#install' | relative_url }}">Install</a>
-        <a href="{{ '/docs/' | relative_url }}">Docs</a>
-        <a href="https://github.com/peregrinefinch/jinks">Source</a>
-        <a href="https://pooka.run/">Built with Pooka</a>
+      <a class="foot-home" href="{{ '/' | relative_url }}" aria-label="Jinks home">
+        <img src="{{ '/assets/logo-app-icon.png' | relative_url }}" alt="" width="56" height="56">
+        <span>
+          <strong>Jinks</strong>
+          <span>A little mischief for the static web.</span>
+        </span>
+      </a>
+      <nav class="foot-nav" aria-label="Footer">
+        <div>
+          <h2>Learn</h2>
+          <ul>
+            <li><a href="{{ '/docs/#install' | relative_url }}">Install</a></li>
+            <li><a href="{{ '/docs/' | relative_url }}">Documentation</a></li>
+            <li><a href="{{ '/cookbook/' | relative_url }}">Cookbook</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Project</h2>
+          <ul>
+            <li><a href="https://github.com/peregrinefinch/jinks">Source on GitHub</a></li>
+            <li><a href="https://pooka.run/">Built with Pooka</a></li>
+          </ul>
+        </div>
       </nav>
     </div>
   </footer>
